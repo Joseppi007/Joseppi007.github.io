@@ -31,20 +31,50 @@
 }
 
 @keyframes rainbow {
-    0% { color: hsl(0 100 50); }
-    12.5% { color: hsl(45 100 50); }
-    25% { color: hsl(90 100 50); }
-    37.5% { color: hsl(135 100 50); }
-    50% { color: hsl(180 100 50); }
-    62.5% { color: hsl(225 100 50); }
-    75% { color: hsl(270 100 50); }
-    87.5% { color: hsl(315 100 50); }
-    100% { color: hsl(360 100 50); }
+    0% { color: hsl(0 80 50); }
+    12.5% { color: hsl(45 100 40); }
+    25% { color: hsl(90 100 35); }
+    37.5% { color: hsl(135 100 35); }
+    50% { color: hsl(180 100 30); }
+    62.5% { color: hsl(225 80 55); }
+    75% { color: hsl(270 90 55); }
+    87.5% { color: hsl(315 100 40); }
+    100% { color: hsl(360 80 50); }
+}
+
+@keyframes rocking {
+    0%   { transform: rotate( 0deg) scale(1, 1); }
+    25%  { transform: rotate(-2deg) scale(0.9523809523809523, 1.05); }
+    50%  { transform: rotate( 0deg) scale(1, 1); }
+    75%  { transform: rotate( 2deg) scale(0.9523809523809523, 1.05); }
+    100% { transform: rotate( 0deg) scale(1, 1); }
+}
+
+@keyframes antirocking {
+    0%   { transform: rotate( 0deg) scale(1, 1); }
+    25%  { transform: rotate( 2deg) scale(1.05, 0.9523809523809523); }
+    50%  { transform: rotate( 0deg) scale(1, 1); }
+    75%  { transform: rotate(-2deg) scale(1.05, 0.9523809523809523); }
+    100% { transform: rotate( 0deg) scale(1, 1); }
 }
 
 .rainbow {
     animation-name: rainbow;
     animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+.rocking {
+    animation-name: rocking;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+}
+
+.antirocking {
+    animation-name: antirocking;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
     animation-iteration-count: infinite;
 }
 
